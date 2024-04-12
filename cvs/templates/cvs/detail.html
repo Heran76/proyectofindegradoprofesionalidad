@@ -1,1 +1,12 @@
-{{ persona }}
+<a href="../">Inicio</a>
+<a href="%url 'index' %">Index</a>
+
+
+
+<h1>{{persona.nombre}} {{persona.apellidos}} </h>
+
+<ul>
+    {% for p in persona.experiencia_set.all %}
+        <li>{{ p.puesto }}</li>
+     {% endfor %}
+</ul>  
